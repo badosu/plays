@@ -9,26 +9,26 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130527151302) do
+ActiveRecord::Schema.define(version: 20130527151302) do
 
-  create_table "games", :force => true do |t|
+  create_table "games", force: true do |t|
     t.string   "title"
     t.text     "remote_cover"
     t.integer  "rate"
     t.text     "review"
-    t.string   "state",             :default => "current"
-    t.integer  "total_sessions",    :default => 0
+    t.string   "state",             default: "current"
+    t.integer  "total_sessions",    default: 0
     t.date     "started_on"
     t.date     "finished_on"
     t.text     "url"
     t.text     "blurb"
     t.text     "forum_url"
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
-    t.integer  "total_days_played", :default => 0
-    t.boolean  "favorite",          :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "total_days_played", default: 0
+    t.boolean  "favorite",          default: false
   end
 
 end
