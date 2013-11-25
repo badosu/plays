@@ -17,6 +17,7 @@ group :development, :test do
   gem 'meta_request', '0.2.1'
   gem 'rspec-rails'
   gem 'guard'
+  gem 'factory_girl_rails'
 end
 
 group :production do
